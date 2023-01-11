@@ -1,9 +1,22 @@
-import Clock from "./components/Clock";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 function App() {
+  // const quantites = [1, 2, 3]
   return (
     <div>
-      <Clock />
+      {/* <ClockList quantites={quantites}/> */}
+      {/* <From /> */}
+      {/* <Calculator /> */}
+      {/* <Emoji>
+            {({ addEmoji }) => (
+                <Bracket>
+                    {({ addBracket }) => <Text addEmoji={addEmoji} addBracket={addBracket} />}
+                </Bracket>
+            )}
+      </Emoji> */} 
+      <ClickCounter />
+      <HoverCounter />
     </div>
   );
 }
