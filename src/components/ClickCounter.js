@@ -1,9 +1,9 @@
 import React from "react";
-import withCounter from "./HOC/withCounter";
 
-const ClickCounter = (props) => {
-  const { count, incrementCount } = props;
-  return (
+class ClickCounter extends React.Component{
+  render () {
+    const { count, incrementCount } = this.props
+    return (
     <div className="bg-white max-w-[500px] mx-auto text-center p-4 rounded-md drop-shadow-md my-6">
       <button
         type="button"
@@ -14,6 +14,7 @@ const ClickCounter = (props) => {
       </button>
     </div>
   );
+  }
 }
 
-export default withCounter(ClickCounter);
+export default ClickCounter;
