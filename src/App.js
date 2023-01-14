@@ -1,9 +1,15 @@
+import React from "react";
 import ClickCounter from "./components/ClickCounter";
-import HoverCounter from "./components/HoverCounter";
 import Counter from "./components/render-props/Counter";
+import Section from "./components/Section";
 
-function App() {
+class App extends React.Component {
   // const quantites = [1, 2, 3]
+  state = {
+    theme : 'dark'
+  }
+ render() {
+  const { theme } = this.state;
   return (
     <div>
       {/* <ClockList quantites={quantites}/> */}
@@ -24,13 +30,10 @@ function App() {
           <ClickCounter count={counter} incrementCount={incrementCount} />
         )}
       </Counter>
-      <Counter>
-        {(counter, incrementCount) => (
-          <HoverCounter count={counter} incrementCount={incrementCount} />
-        )}
-      </Counter>
+      <Section theme={ theme } />
     </div>
   );
+ }
 }
 
 export default App;

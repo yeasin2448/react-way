@@ -1,25 +1,18 @@
 import React from "react";
 
-class HoverCounter extends React.Component {
-  state = {
-    count : 0,
-  }
-  incrementCount = () => {
-    this.setState((prevState) => ({ count : prevState.count + 1 }))
-  }
-  render () {
-    const { count } = this.state;
+function HoverCounter ({ count, incrementCount, theme }) {
+    const style = theme === "dark" ? { backgroundColor : '#000', color : '#fff' } : null;
     return (
       <div className="bg-white max-w-[500px] mx-auto drop-shadow-md rounded-md p-4">
         <h4
-          onMouseOver={this.incrementCount}
+          onMouseOver={incrementCount}
           className="text-xl font-sans font-bold text-black"
+          style={style}
         >
           Hello I am Yeasin arafat, I'm exist {count} time
         </h4>
       </div>
     );
-  }
 }
 
 export default HoverCounter;
