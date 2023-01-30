@@ -1,12 +1,12 @@
 import Content from "./Content";
 
-function Section({ theme }) {
+function Section() {
   return (
     <div>
       <h1 className="text-black text-lg font-medium text-center">
         This is a section
       </h1>
-      <Content theme={theme} />
+      <Content />
     </div>
   );
 }

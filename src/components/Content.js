@@ -1,7 +1,8 @@
+import ThemeContext from "./context/themeContext";
 import HoverCounter from "./HoverCounter";
 import Counter from "./render-props/Counter";
 
-function Content({ theme }) {
+function Content() {
   return (
     <div>
       <h1 className="text-black text-lg font-medium text-center">
@@ -9,7 +10,15 @@ function Content({ theme }) {
       </h1>
       <Counter>
         {(counter, incrementCount) => (
-          <HoverCounter count={counter} incrementCount={incrementCount} theme={ theme } />
+          <ThemeContext.Consumer>
+            {({ theme }) => (
+              <HoverCounter
+                count={counter}
+                incrementCount={incrementCount}
+                theme={theme}
+              />
+            )}
+          </ThemeContext.Consumer>
         )}
       </Counter>
     </div>
