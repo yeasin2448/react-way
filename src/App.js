@@ -8,22 +8,21 @@ class App extends React.Component {
   // const quantites = [1, 2, 3]
   state = {
     theme: "dark",
-  };
-  switchTheme = () => {
-    this.setState(({ theme }) => {
-      if (theme === "dark") {
-        return {
-          theme: "light",
-        };
-      } else {
-        return {
-          theme: "dark",
-        };
-      }
-    });
+    switchTheme: () => {
+      this.setState(({ theme }) => {
+        if (theme === "dark") {
+          return {
+            theme: "light",
+          };
+        } else {
+          return {
+            theme: "dark",
+          };
+        }
+      });
+    },
   };
   render() {
-    const { theme } = this.state;
     return (
       <div>
         {/* <ClockList quantites={quantites}/> */}
@@ -44,7 +43,7 @@ class App extends React.Component {
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
         </Counter>
-        <ThemeContext.Provider value={{ theme, switchTheme : this.switchTheme }}>
+        <ThemeContext.Provider value={ this.state }>
           <Section />
         </ThemeContext.Provider>
       </div>
