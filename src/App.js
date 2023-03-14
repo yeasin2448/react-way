@@ -3,6 +3,7 @@ import ClickCounter from "./components/ClickCounter";
 import ThemeContext from "./components/context/themeContext";
 import Counter from "./components/render-props/Counter";
 import Section from "./components/Section";
+import Todo from "./components/use-hook/Todo";
 
 class App extends React.Component {
   // const quantites = [1, 2, 3]
@@ -46,6 +47,7 @@ class App extends React.Component {
         <ThemeContext.Provider value={ this.state }>
           <Section />
         </ThemeContext.Provider>
+        <Todo />
       </div>
     );
   }
