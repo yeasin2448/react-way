@@ -2,15 +2,15 @@ import { useState } from "react";
 
 
 function Todo () {
-    const [todo, setTodo] = useState("");
-    const [warning, setWarning] = useState("");
-
+    const [todo, setTodo] = useState();
+    const [warning, setWarning] = useState();
+    
     const handleInput = (e) => {
-        const inputValue = e.target.value;
-        const updatedWarning = inputValue.includes('js') ? 'You need javascript skill to complete the task. Do you have it?' : null;
-        
-        setTodo(inputValue);
-        setWarning(updatedWarning);
+      const inputValue = e.target.value;
+      const updatedWarning = inputValue.includes('.js') ? 'You need javascript skill to complete the task. Do you have it?': null;
+
+      setTodo(inputValue);
+      setWarning(updatedWarning);
     }
     
 

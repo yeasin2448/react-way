@@ -3,6 +3,7 @@ import ClickCounter from "./components/ClickCounter";
 import ThemeContext from "./components/context/themeContext";
 import Counter from "./components/render-props/Counter";
 import Section from "./components/Section";
+import Count from "./components/use-hook/Count";
 import Todo from "./components/use-hook/Todo";
 
 class App extends React.Component {
@@ -48,6 +49,7 @@ class App extends React.Component {
           <Section />
         </ThemeContext.Provider>
         <Todo />
+        <Count />
       </div>
     );
   }
