@@ -4,6 +4,8 @@ import ThemeContext from "./components/context/themeContext";
 import Counter from "./components/render-props/Counter";
 import Section from "./components/Section";
 import Count from "./components/use-hook/Count";
+// import MyComponent from "./components/use-hook/MyComponent";
+import MyComponentFunc from "./components/use-hook/MyComponentFunc";
 import Todo from "./components/use-hook/Todo";
 
 class App extends React.Component {
@@ -45,11 +47,13 @@ class App extends React.Component {
             <ClickCounter count={counter} incrementCount={incrementCount} />
           )}
         </Counter>
-        <ThemeContext.Provider value={ this.state }>
+        <ThemeContext.Provider value={this.state}>
           <Section />
         </ThemeContext.Provider>
         <Todo />
         <Count />
+        {/* <MyComponent /> */}
+        <MyComponentFunc />
       </div>
     );
   }
